@@ -1,12 +1,12 @@
-
+//KEY
 const SUPABASE_URL = 'https://hvnzxpemqbhkkyuelvlk.supabase.co';
 const SUPABASE_KEY = 'sb_publishable_qXyAOhevajGeHAHNW5IBAA_GZ8XrCco';
 
 const API_URL = `${SUPABASE_URL}/rest/v1`;
 
-// ============================================
+
 // SUPABASE AUTH
-// ============================================
+
 async function loginSupabase(email, password) {
     try {
         const response = await fetch(`${SUPABASE_URL}/auth/v1/token?grant_type=password`, {
