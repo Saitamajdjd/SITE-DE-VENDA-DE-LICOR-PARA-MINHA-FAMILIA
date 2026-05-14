@@ -82,7 +82,7 @@ nav {
     opacity: 1;
 }
 
-/* Hero Section */
+/* HERO  */
 .hero {
     text-align: center;
     padding: 4rem 2rem;
@@ -102,14 +102,14 @@ nav {
     margin: 0 auto;
 }
 
-/* Container */
+/* CONTAINER */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
 }
 
-/* Section Titles */
+/* TITULOS */
 .section-title {
     text-align: center;
     font-size: 2rem;
@@ -127,7 +127,7 @@ nav {
     margin: 0.5rem auto 0;
 }
 
-/* Grid de Licores */
+/* GRID DOS LICOR */
 .liquors-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -135,7 +135,7 @@ nav {
     padding: 2rem 0;
 }
 
-/* Card de Licor */
+/* CARD DO LICOR */
 .liquor-card {
     background: linear-gradient(145deg, var(--bg-card), rgba(42, 21, 32, 0.8));
     border-radius: 16px;
@@ -203,7 +203,7 @@ nav {
     font-weight: normal;
 }
 
-/* Botão de Compra */
+/* BOTÃO DE COMPRA */
 .btn-comprar {
     width: 100%;
     padding: 0.9rem 1.5rem;
@@ -224,7 +224,7 @@ nav {
     transform: scale(1.02);
 }
 
-/* Modal */
+/* MOdAL */
 .modal-overlay {
     display: none;
     position: fixed;
