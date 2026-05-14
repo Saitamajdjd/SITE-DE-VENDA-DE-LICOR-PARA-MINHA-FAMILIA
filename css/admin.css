@@ -1,4 +1,4 @@
-/* Admin Page Styles */
+
 .admin-container {
     max-width: 1000px;
     margin: 2rem auto;
@@ -236,7 +236,7 @@
     color: var(--secondary);
 }
 
-/* Modal */
+/* MODAL ESTILO */
 .modal-form {
     display: none;
     position: fixed;
@@ -362,7 +362,7 @@ input[type="file"] {
     display: none;
 }
 
-/* Notificação Toast */
+/* NOTIFICA */
 .toast-notificacao {
     position: fixed;
     bottom: 30px;
