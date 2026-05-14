@@ -1,6 +1,3 @@
-// ============================================
-// ADMIN - LICOR DOS PRIMOS (Versão Supabase com Auth)
-// ============================================
 
 const SUPABASE_URL = 'https://hvnzxpemqbhkkyuelvlk.supabase.co';
 const SUPABASE_KEY = 'sb_publishable_qXyAOhevajGeHAHNW5IBAA_GZ8XrCco';
@@ -56,17 +53,17 @@ function isLoggedIn() {
     return localStorage.getItem('supabase_token') && localStorage.getItem('supabase_user');
 }
 
-// ============================================
-// VARIÁVEIS GLOBAIS
-// ============================================
+
+// VARIaVEIS GLOBAIS
+
 let licores = [];
 let estoque = {};
 let editando = false;
 let fotoBase64 = '';
 
-// ============================================
+
 // API FUNCTIONS
-// ============================================
+
 async function buscarLicores() {
     try {
         const responseLicores = await fetch(`${API_URL}/licores?select=*&order=id`, {
@@ -167,9 +164,7 @@ async function atualizarEstoqueItem(id, quantidade) {
     });
 }
 
-// ============================================
-// INICIALIZAÇÃO
-// ============================================
+
 function initAdmin() {
     if (isLoggedIn()) {
         buscarLicores();
@@ -182,9 +177,9 @@ if (isLoggedIn()) {
     initAdmin();
 }
 
-// ============================================
+
 // LOGIN
-// ============================================
+
 async function fazerLogin() {
     const email = document.getElementById('admin-email').value.trim();
     const senha = document.getElementById('admin-password').value.trim();
@@ -207,9 +202,9 @@ function fazerLogout() {
     logoutSupabase();
 }
 
-// ============================================
-// RENDERIZAR
-// ============================================
+
+// RENDERIZAÇÃO
+
 function renderizarEstoque() {
     const grid = document.getElementById('stock-grid');
     grid.innerHTML = licores.map(l => {
@@ -254,9 +249,9 @@ async function salvarEstoque() {
     }
 }
 
-// ============================================
-// MODAL
-// ============================================
+
+// MODAL DE ADIÇÃO
+
 function abrirModalAdicionar() {
     editando = false;
     fotoBase64 = '';
@@ -358,9 +353,8 @@ function mostrarNotificacao(mensagem) {
     setTimeout(() => { toast.classList.remove('show'); setTimeout(() => toast.remove(), 300); }, 3000);
 }
 
-// ============================================
-// EVENT LISTENERS
-// ============================================
+
+
 document.getElementById('admin-password').addEventListener('keypress', function(e) {
     if (e.key === 'Enter') fazerLogin();
 });
