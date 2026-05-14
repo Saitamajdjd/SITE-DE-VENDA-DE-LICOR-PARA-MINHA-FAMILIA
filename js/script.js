@@ -1,6 +1,4 @@
-// ============================================
-// LOJA LICOR DOS PRIMOS (Versão Supabase)
-// ============================================
+//KEY
 
 const SUPABASE_URL = 'https://hvnzxpemqbhkkyuelvlk.supabase.co';
 const SUPABASE_KEY = 'sb_publishable_qXyAOhevajGeHAHNW5IBAA_GZ8XrCco';
@@ -18,9 +16,9 @@ let estoque = {};
 let produtoAtual = null;
 let quantidade = 1;
 
-// ============================================
-// CARREGAR DADOS
-// ============================================
+
+// CARREGAMENTO DE  DADOS
+
 async function carregarDados() {
     try {
         const responseLicores = await fetch(`${API_URL}/licores?select=*&order=id`, {
@@ -43,9 +41,9 @@ async function carregarDados() {
     }
 }
 
-// ============================================
+
 // ATUALIZAR ESTOQUE
-// ============================================
+
 async function atualizarEstoqueAPI(licorId, quantidade) {
     await fetch(`${API_URL}/estoque?licor_id=eq.${licorId}`, {
         method: 'PATCH',
@@ -54,9 +52,9 @@ async function atualizarEstoqueAPI(licorId, quantidade) {
     });
 }
 
-// ============================================
+
 // RENDERIZAR LICORES
-// ============================================
+
 function renderizarLicores() {
     const grid = document.getElementById('liquors-grid');
     if (!grid) return;
@@ -89,9 +87,9 @@ function renderizarLicores() {
     }).join('');
 }
 
-// ============================================
-// MODAL
-// ============================================
+
+// MODELO
+
 function abrirModal(id) {
     produtoAtual = licores.find(l => l.id === id);
     if (!produtoAtual) return;
@@ -144,9 +142,9 @@ function alterarQuantidade(input) {
     }
 }
 
-// ============================================
-// FINALIZAR COMPRA
-// ============================================
+
+// FINALIZAÇÃO DE COMPRA
+
 async function finalizarCompra() {
     if (!produtoAtual) return;
 
@@ -172,9 +170,9 @@ async function finalizarCompra() {
     fecharModal();
 }
 
-// ============================================
-// EVENT LISTENERS
-// ============================================
+
+//LISTENERS
+
 document.addEventListener('click', (e) => {
     if (e.target.classList.contains('modal-overlay')) fecharModal();
 });
